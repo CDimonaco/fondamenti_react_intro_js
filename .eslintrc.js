@@ -1,10 +1,22 @@
+// Installati eslint-plugin-react e eslint-plugin-html
 module.exports = {
   env: {
     browser: true,
     commonjs: true,
     es2021: true,
   },
-  extends: 'airbnb-base',
+  extends: [
+    'airbnb-base',
+    'plugin:react/recommended',
+  ],
+  plugins: [
+    'html',
+  ],
+  settings: {
+    html: {
+      'javascript-mime-types': ['text/javascript', 'text/babel'],
+    },
+  },
   overrides: [
     {
       env: {
